@@ -29,8 +29,7 @@ class MyTestCase(unittest.TestCase):
     def test_double_root_case(self):
         """Solving a quadratic equation with a repeated root."""
         a, b, c = 1, 2, 1
-        x1_ref, x2_ref = driver.solve_quadratic_equation(a, b, c)
         x1, x2 = solve_quadratic_equation(a, b, c)
-        self.assertAlmostEqual(x1, x1_ref)
-        self.assertAlmostEqual(x2, x2_ref)        
+        self.assertAlmostEqual(-1, x1)
+        self.assertAlmostEqual(None, x2)        
         
