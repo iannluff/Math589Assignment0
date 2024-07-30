@@ -31,9 +31,11 @@ def solve_quadratic_equation(a, b, c):
 
     return (root1, root2)
 # Example usage:
-try:
-    roots = solve_quadratic_equation(1, -1000000.001, 1)  # Using the earlier example coefficients
-    print("Roots:", roots)
-except ValueError as e:
-    print("Error:", e)
+# NOTE: Also, as simple testing framework.
+if __name__ == "__main__":
+    try:
+        roots = solve_quadratic_equation(1, -1000000.001, 1)  # Using the earlier example coefficients
+        print("Roots:", roots)
+    except ValueError as e:
+        print("Error:", e)
 	
