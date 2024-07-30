@@ -32,3 +32,10 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEqual(-1, x1)
         self.assertAlmostEqual(None, x2)        
         
+    def test_degenerate_quadratic_case(self):
+        """Solving a quadratic with a=0."""
+        a, b, c = 0, 1, 1
+        try:
+            x1, x2 = quadratic.solve_quadratic_equation(a, b, c)
+        except ZeroDivisionError:
+            self.fail("Unhandled division by 0.")
