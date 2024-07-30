@@ -1,3 +1,13 @@
+#----------------------------------------------------------------
+# File:     solve_quadratic_equation.py
+#----------------------------------------------------------------
+#
+# Author:   Marek Rychlik (rychlik@arizona.edu)
+# Date:     Tue Jul 30 09:37:29 2024
+# Copying:  (C) Marek Rychlik, 2020. All rights reserved.
+# 
+#----------------------------------------------------------------
+# A basic quadratic equation solver 
 
 import math
 def solve_quadratic_equation(a, b, c):
