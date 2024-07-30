@@ -48,4 +48,3 @@ if __name__ == "__main__":
         print("Roots:", roots)
     except ValueError as e:
         print("Error:", e)
-	
