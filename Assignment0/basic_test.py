@@ -38,4 +38,4 @@ class MyTestCase(unittest.TestCase):
         try:
             x1, x2 = quadratic.solve_quadratic_equation(a, b, c)
         except ZeroDivisionError:
-            self.fail("Unhandled division by 0.")
+            self.fail("Unhandled division by 0 when a=0.")
