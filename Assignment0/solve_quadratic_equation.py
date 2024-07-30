@@ -7,7 +7,7 @@
 # Copying:  (C) Marek Rychlik, 2020. All rights reserved.
 # 
 #----------------------------------------------------------------
-# A basic quadratic equation solver 
+# A basic quadratic equation solver. High-school method.
 
 import math
 def solve_quadratic_equation(a, b, c):
