@@ -12,6 +12,6 @@ import solve_quadratic_equation as quadratic
 
 def test_something():
     roots = quadratic.solve_quadratic_equation(1, -1000000.001, 1)
-    #print("Testing without classes/unittest, indeed...")
+    # print("Testing without classes/unittest, indeed...")
     assert( abs(1000000 -  roots[0] ) < 1e-7 )
 
