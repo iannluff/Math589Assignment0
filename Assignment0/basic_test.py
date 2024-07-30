@@ -7,7 +7,7 @@
 # Copying:  (C) Marek Rychlik, 2020. All rights reserved.
 # 
 #----------------------------------------------------------------
-# A basic unit test with the "unittest framework"
+# A basic unit test with the "unittest framework".
 
 import unittest
 import solve_quadratic_equation as quadratic
