@@ -37,6 +37,7 @@ def solve_quadratic_equation(a, b, c):
     # Calculate the discriminant
     discriminant = b**2 - (4*a*c)
 
+    #Checks for complex roots
     if discriminant < 0:
         raise InvalidEquationError("The discriminant is negative. No real roots.")
     elif a == 0:
