@@ -35,8 +35,8 @@ def solve_quadratic_equation(a, b, c):
     Raises:
     """
     # Calculate the discriminant
-    discriminant = b**2 - (4*a*c)
-
+    discriminant = (b**2) - (4*a*c)
+    
     #Checks for complex roots
     if discriminant < 0:
         raise InvalidEquationError("The discriminant is negative. No real roots.")
@@ -52,7 +52,6 @@ def solve_quadratic_equation(a, b, c):
         # Compute both roots using the standard quadratic formula
         root1 = (-b + sqrt_discriminant) / (2 * a)
         root2 = (-b - sqrt_discriminant) / (2 * a)
-    
     return (root1, root2)
 # Example usage:
 # NOTE: Also, as simple testing framework.
