@@ -10,6 +10,11 @@
 # A basic quadratic equation solver. High-school method.
 
 import math
+
+class InvalidEquationError(Exception):
+	def __init__(self, message):
+            self.message = message
+            
 def solve_quadratic_equation(a, b, c):
     """
     Solve the quadratic equation a*x^2 + b*x + c = 0 using the standard quadratic formula.
@@ -30,15 +35,23 @@ def solve_quadratic_equation(a, b, c):
     Raises:
     """
     # Calculate the discriminant
-    discriminant = b**2 - 4*a*c
+    discriminant = b**2 - (4*a*c)
 
-    # Calculate the discriminant's square root
-    sqrt_discriminant = math.sqrt(discriminant)
+    if discriminant < 0:
+        raise InvalidEquationError("The discriminant is negative. No real roots.")
+    elif a == 0:
+        raise InvalidEquationError("The equation is not a quadratic.")
+    elif discriminant == 0:
+        root1 = -b / (2 * a)
+        return (root1, None)
+    else:
+        # Calculate the discriminant's square root
+        sqrt_discriminant = math.sqrt(discriminant)
 
-    # Compute both roots using the standard quadratic formula
-    root1 = (-b + sqrt_discriminant) / (2 * a)
-    root2 = (-b - sqrt_discriminant) / (2 * a)
-
+        # Compute both roots using the standard quadratic formula
+        root1 = (-b + sqrt_discriminant) / (2 * a)
+        root2 = (-b - sqrt_discriminant) / (2 * a)
+    
     return (root1, root2)
 # Example usage:
 # NOTE: Also, as simple testing framework.
@@ -46,5 +59,5 @@ if __name__ == "__main__":
     try:
         roots = solve_quadratic_equation(1, -1000000.001, 1)  # Using the earlier example coefficients
         print("Roots:", roots)
-    except ValueError as e:
+    except InvalidEquationError as e:
         print("Error:", e)
