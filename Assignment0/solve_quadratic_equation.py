@@ -57,7 +57,7 @@ def solve_quadratic_equation(a, b, c):
 # NOTE: Also, as simple testing framework.
 if __name__ == "__main__":
     try:
-        roots = solve_quadratic_equation(1, -1000000.001, 1)  # Using the earlier example coefficients
+        roots = solve_quadratic_equation(1, 1000000, 1)  # Using the earlier example coefficients
         print("Roots:", roots)
     except InvalidEquationError as e:
         print("Error:", e)
